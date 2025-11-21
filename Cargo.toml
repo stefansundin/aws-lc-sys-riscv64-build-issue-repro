@@ -1,0 +1,7 @@
+[package]
+name = "aws-lc-sys-riscv64-build-issue-repro"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+aws-lc-sys = "0.33.0"
