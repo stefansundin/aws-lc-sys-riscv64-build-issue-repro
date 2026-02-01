@@ -9,9 +9,6 @@ ENV RUST_BACKTRACE=full
 
 RUN apt-get update && apt-get install -y musl-tools
 
-# Still fails with this:
-# RUN apt-get install -y cmake
-
 WORKDIR /app
 ADD . .
 
@@ -23,3 +20,5 @@ RUN case "$TARGETARCH" in \
     esac && \
     rustup target add $TARGET && \
     cargo build --target $TARGET
+
+ENTRYPOINT [ "/app/target/riscv64gc-unknown-linux-musl/debug/aws-lc-sys-riscv64-build-issue-repro" ]
