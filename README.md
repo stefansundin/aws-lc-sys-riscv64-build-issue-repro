@@ -1,3 +1,7 @@
+# Issue fixed
+
+This should no longer be a problem. Be sure to not depend on `aws-lc-sys` directly, use `aws-lc-rs` instead.
+
 # Repro in docker
 
 ```shell
